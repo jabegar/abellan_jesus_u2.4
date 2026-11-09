@@ -1,0 +1,4 @@
+# 1. Al cargar / aparecen dos peticiones en la terminal. ¿Cuáles son y por qué?
+La primera es la del propio HTML que llama para cargar y la segunda es la del CSS que utiliza ese HTML para dar estilo. Se llama al CSS porque desde el propio HTML se le invoca con ```<link rel="stylesheet" href="./estilos.css">```
+# 2. Imagina que tienes que servir un vídeo de 500 MB. ¿Qué problema tendría fs.readFile y qué alternativa de las vistas en clase usarías?
+```readFile()``` carga el archivo en memoria completo antes de enviarlo, por lo que podria consumir mucha ram y ralentizar el servidor si se hacen muchas peticiones del video a la vez. La alternativa podria ser usar ```createReadStream()``` que permite leer el archivo en pequeños bloques.
